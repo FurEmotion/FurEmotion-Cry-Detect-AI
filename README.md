@@ -16,7 +16,7 @@
 
 반려동물의 울음 감지 AI는 Google에서 개발한 Yamnet을 fine-tuning하여 개발하였습니다. yamnet의 라이센스에 따라 **모델 파일은 공개할 수 없습니다.** 따라서, 이 레포지토리에는 **모델 파일이 포함되어 있지 않습니다.**. 아래 제시된 순서를 통해 모델 파일을 다운로드 받아야 하며 **제시된 정확한 버전의 라이브러리를 사용**해야 합니다.
 
-1. 현재 레포지토리를 가져온다.
+1. 현재 레포지토리를 가져옵니다.
 
 ```bash
 git clone https://github.com/FurEmotion/FurEmotion-Cry-Detect-AI.git
@@ -40,7 +40,7 @@ pip install tensorflow-io==0.36.0
 pip install resampy pysoundfile
 ```
 
-4. yamnet 모델을 받아온다.
+4. yamnet 모델을 받아옵니다.
 
 ```bash
 # tensorflow/models 레포지토리를 클론.
@@ -57,7 +57,7 @@ python yamnet_test.py
 cd ../../../..
 ```
 
-5. Clone한 yamnet 폴더에 본 레포지토리의 `yamnet_new.py`와 `main.py`, `cat.wav` 파일을 복사한다.
+5. Clone한 yamnet 폴더에 본 레포지토리의 `yamnet_new.py`와 `main.py`, `cat.wav` 파일을 복사합니다.
 
 ```bash
 # 파일 복사
@@ -67,16 +67,16 @@ cp yamnet_new.py main.py cat.wav models/research/audioset/yamnet
 cd models/research/audioset/yamnet
 ```
 
-6. `main.py`를 실행하여 파인튜닝을 수행.
+6. `main.py`를 실행하여 파인튜닝을 수행합니다.
 
 ```bash
 python main.py
 ```
 
-7. 모델이 정상적으로 학습되었는지 확인한다.
+7. 모델이 정상적으로 학습되었는지 확인합니다.
 
 ```bash
-# cat이라고 뜨면 정상이다.
+# cat이라고 뜨면 정상.
 python inference.py cat.wav
 ```
 
